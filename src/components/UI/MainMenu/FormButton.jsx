@@ -1,7 +1,7 @@
 import React from "react";
 
 function FormButton(props) {
-  return <button>{props.titel}</button>;
+  return <button className="form-button">{props.titel}</button>;
 }
 
 export default FormButton;
