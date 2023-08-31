@@ -2,7 +2,6 @@
   width: 900px;
   height: 500px;
   margin-top: 30px;
-  border: 1px solid;
 }
 .inner-container {
   width: 100%;
@@ -23,11 +22,12 @@
   left: 0;
   width: 100px;
   height: 100%;
-  font-size: 70px;
+  font-size: 40px;
   color: rgba(155, 155, 155, 0.472);
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: 0.5s;
 }
 .leftArrow:hover {
   background-color: rgba(175, 175, 175, 0.7);
@@ -36,8 +36,20 @@
 
 .discription-block {
   position: relative;
+  display: flex;
+  align-items: center;
   width: 50%;
   background-color: rgb(57, 55, 61);
+}
+.discription-product {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: underline;
+  color: white;
 }
 
 .rightArrow {
@@ -45,11 +57,12 @@
   right: 0;
   width: 100px;
   height: 100%;
-  font-size: 70px;
+  font-size: 40px;
   color: rgb(244, 244, 244, 0.5);
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: 0.5s;
 }
 .rightArrow:hover {
   background-color: rgb(241, 241, 241, 0.1);
@@ -68,5 +81,6 @@
   height: 8px;
   margin: 5px;
   border: 0;
-  background-color: rgb(106, 106, 106);
+  background-color: rgb(189, 185, 185);
+  cursor: pointer;
 }

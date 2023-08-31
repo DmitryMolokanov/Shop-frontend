@@ -1,42 +1,45 @@
 import React, { useEffect, useState } from "react";
+import Pointer from "./UI/Carousel/Pointer";
+import Picture from "./UI/Carousel/Picture";
 import "../styles/Carousel.css";
+import Discription from "./UI/Carousel/Discription";
 
 function Carousel(props) {
   const [index, setIndex] = useState(0);
-  function slideRigth() {
-    index <= 3 ? setIndex(index + 1) : setIndex(0);
+
+  function slideRigth(index) {
+    setIndex(index);
   }
-  function slideLeft() {
-    index >= 1 ? setIndex(index - 1) : setIndex(4);
+  function slideLeft(index) {
+    setIndex(index);
+  }
+
+  function getIndex(index) {
+    setIndex(index);
   }
 
   // useEffect(() => {
   //   const slideImg = setInterval(() => {
   //     slideRigth();
-  //   }, 1000);
+  //   }, 5000);
   //   return () => clearInterval(slideImg);
   // });
 
   return (
     <div className="carousel-container">
       <div className="inner-container">
-        <div className="img-block">
-          <img src={props.products[`${index}`].img[0]} alt="" className="img" />
-          <button className="leftArrow" onClick={slideLeft}>
-            {"<"}
-          </button>
-        </div>
-        <div className="discription-block">
-          <button className="rightArrow" onClick={slideRigth}>
-            {">"}
-          </button>
-        </div>
+        <Picture
+          products={props.products}
+          index={index}
+          slideLeft={slideLeft}
+        />
+        <Discription
+          index={index}
+          products={props.products}
+          slideRigth={slideRigth}
+        />
       </div>
-      <div className="pointer-block">
-        {props.products.map((qty, index) => (
-          <button key={index} className="pointer-btn"></button>
-        ))}
-      </div>
+      <Pointer index={index} products={props.products} getIndex={getIndex} />
     </div>
   );
 }
