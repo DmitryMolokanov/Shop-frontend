@@ -7,6 +7,10 @@ import Discription from "./UI/Carousel/Discription";
 function Carousel(props) {
   const [index, setIndex] = useState(0);
 
+  function autoSlide() {
+    index <= 3 ? setIndex(index + 1) : setIndex(0);
+  }
+
   function slideRigth(index) {
     setIndex(index);
   }
@@ -20,7 +24,8 @@ function Carousel(props) {
 
   // useEffect(() => {
   //   const slideImg = setInterval(() => {
-  //     slideRigth();
+  //     console.log(index);
+  //     autoSlide();
   //   }, 5000);
   //   return () => clearInterval(slideImg);
   // });

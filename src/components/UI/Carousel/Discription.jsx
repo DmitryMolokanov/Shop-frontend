@@ -1,7 +1,6 @@
 import React from "react";
 
 function Discription(props) {
-  console.log(props);
   return (
     <div className="discription-block">
       <div className="discription-product">
