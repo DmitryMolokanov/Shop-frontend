@@ -1,0 +1,101 @@
+.product-page-main {
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+
+.back-button-container {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.back-button {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-size: larger;
+  background-color: rgb(101, 164, 130);
+}
+
+.product-card-img {
+  margin: 20px 0 0 100px;
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+}
+.img-product {
+  width: 100%;
+  height: 100%;
+}
+
+.product-card-discription {
+  width: 500px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 50px;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107);
+}
+.title-product {
+  font-size: x-large;
+  font-weight: 700;
+}
+.cost-product {
+  font-size: large;
+  font-weight: 500;
+}
+.order-block {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
+  margin-top: 100px;
+  margin-left: 50px;
+  border: 1px solid;
+}
+.order {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid;
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107);
+  font-size: larger;
+  text-align: center;
+  line-height: 50px;
+}
+.select-qty {
+  width: 50px;
+  padding: 3px;
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107);
+  font-size: medium;
+  font-weight: 700;
+}
+.order-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-add-cart {
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(107, 107, 107);
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn-add-cart:hover {
+  background-color: rgb(101, 164, 130);
+}
