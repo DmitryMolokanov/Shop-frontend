@@ -9,11 +9,13 @@ function ProductsField(props) {
           return (
             <div key={index} className="product-block">
               <div className="img-products-block">
-                <img
-                  src={item.img[0]}
-                  alt={item.name}
-                  className="product-img"
-                />
+                <a href={`/product/${item.id}`}>
+                  <img
+                    src={item.img[0]}
+                    alt={item.name}
+                    className="product-img"
+                  />
+                </a>
               </div>
               <div className="title-block">{item.name}</div>
               <div className="price-block">{item.cost}</div>

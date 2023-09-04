@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     name: "Canon EOS 90D Body",
     cost: "800$",
     img: [
@@ -9,6 +10,7 @@ const products = [
     ],
   },
   {
+    id: 2,
     name: "Apple. AirPods2",
     cost: "300$",
     img: [
@@ -18,6 +20,7 @@ const products = [
     ],
   },
   {
+    id: 3,
     name: "iPhone 14 Pro Max 512GB",
     cost: "500$",
     img: [
@@ -27,6 +30,7 @@ const products = [
     ],
   },
   {
+    id: 4,
     name: "PlayStation5",
     cost: "700$",
     img: [
@@ -35,6 +39,7 @@ const products = [
     ],
   },
   {
+    id: 5,
     name: "Watch Series 8 GPS 45mm",
     cost: "300$",
     img: [

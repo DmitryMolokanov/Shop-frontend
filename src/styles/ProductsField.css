@@ -15,7 +15,6 @@
 
 .products-field {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   width: 90%;
   height: 90%;
@@ -24,6 +23,7 @@
 .product-block {
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
   width: 300px;
   height: 400px;
   border: 1px solid rgb(185, 185, 185);
