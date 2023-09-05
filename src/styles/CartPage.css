@@ -1,0 +1,64 @@
+.cart-page {
+  width: 100%;
+}
+
+.cart-order-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 800px;
+  height: 100px;
+  font-family: "Kanit", sans-serif;
+  background-color: rgb(235, 235, 235, 0.5);
+  border-radius: 10px;
+}
+.catr-img {
+  margin-left: 20px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(107, 107, 107, 0.5);
+}
+.cart-product-title {
+  margin-left: 100px;
+  font-size: larger;
+  font-weight: 600;
+  color: rgb(107, 107, 107);
+  text-decoration: underline;
+}
+.cart-product-cost {
+  position: absolute;
+  right: 300px;
+  font-size: large;
+  color: rgb(107, 107, 107);
+}
+
+.cart-product-qty {
+  position: absolute;
+  right: 70px;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  width: fit-content;
+  height: fit-content;
+  font-size: larger;
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107, 0.5);
+  border: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.close:hover {
+  color: white;
+  background-color: rgb(255, 71, 51);
+}
+.empty-message {
+  font-family: "Kanit", sans-serif;
+  color: white;
+  margin-left: 30px;
+  width: fit-content;
+  background-color: cadetblue;
+  padding: 0 20px 0 20px;
+}
