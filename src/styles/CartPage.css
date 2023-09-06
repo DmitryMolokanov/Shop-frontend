@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.cart-title {
+  margin-left: 50px;
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107);
+}
 .cart-order-block {
   position: relative;
   display: flex;
@@ -13,6 +18,10 @@
   font-family: "Kanit", sans-serif;
   background-color: rgb(235, 235, 235, 0.5);
   border-radius: 10px;
+}
+.cart-id {
+  margin-left: 10px;
+  font-size: large;
 }
 .catr-img {
   margin-left: 20px;

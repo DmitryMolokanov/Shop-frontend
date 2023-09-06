@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import ProductsField from "../components/ProductsField";
 import products from "../products/products";
 import "../styles/ProductsField.css";
+import Copyright from "../components/UI/Сopyright";
 
 function MainPage() {
   const [editedArray, setEditedArray] = useState(products);

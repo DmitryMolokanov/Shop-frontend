@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import MainMenu from "../components/MainMenu";
 import ProductOrder from "../components/UI/ProductPage/ProductOrder";
+import Copyright from "../components/UI/Сopyright";
 import products from "../products/products";
 import "../styles/ProductPage.css";
 
@@ -15,6 +16,7 @@ function ProductPage() {
     <div className="product-page-main">
       <MainMenu />
       <ProductOrder selectedProduct={selectedProduct} />
+      <Copyright />
     </div>
   );
 }
