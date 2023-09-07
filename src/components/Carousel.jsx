@@ -22,13 +22,13 @@ function Carousel(props) {
     setIndex(index);
   }
 
-  // useEffect(() => {
-  //   const slideImg = setInterval(() => {
-  //     console.log(index);
-  //     autoSlide();
-  //   }, 5000);
-  //   return () => clearInterval(slideImg);
-  // });
+  useEffect(() => {
+    const slideImg = setInterval(() => {
+      console.log(index);
+      autoSlide();
+    }, 5000);
+    return () => clearInterval(slideImg);
+  });
 
   return (
     <div className="carousel-container">
