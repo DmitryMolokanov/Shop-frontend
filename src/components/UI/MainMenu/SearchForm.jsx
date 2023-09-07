@@ -4,13 +4,8 @@ import FormButton from "./FormButton";
 function SearchForm(props) {
   const [inputValue, setInputValue] = useState("");
 
-  function getSelectArr(arr) {
-    props.getSelectArr(arr);
-    setInputValue("");
-  }
-
   return (
-    <form className="main-menu-search-form">
+    <form className="main-menu-search-form" action="/search">
       <input
         type="text"
         placeholder="enter product name"
@@ -22,7 +17,6 @@ function SearchForm(props) {
         titel={"Search"}
         inputValue={inputValue}
         products={props.products}
-        getSelectArr={getSelectArr}
       />
     </form>
   );

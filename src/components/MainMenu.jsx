@@ -6,15 +6,11 @@ import CartIcon from "./UI/MainMenu/CartIcon";
 import LoginIcon from "./UI/MainMenu/LoginIcon";
 
 function MainMenu(props) {
-  function getSelectArr(arr) {
-    props.getSelectArr(arr);
-  }
-
   return (
     <div className="main-menu-block">
       <div className="main-menu-container">
         <HomeIcon />
-        <SearchForm products={props.products} getSelectArr={getSelectArr} />
+        <SearchForm products={props.products} />
         <CartIcon title={"Cart"} />
         <LoginIcon title={"Sign In"} />
       </div>

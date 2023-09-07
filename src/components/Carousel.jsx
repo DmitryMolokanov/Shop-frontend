@@ -24,7 +24,6 @@ function Carousel(props) {
 
   useEffect(() => {
     const slideImg = setInterval(() => {
-      console.log(index);
       autoSlide();
     }, 5000);
     return () => clearInterval(slideImg);

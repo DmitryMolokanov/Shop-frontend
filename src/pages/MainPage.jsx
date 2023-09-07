@@ -1,23 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/App.css";
 import MainMenu from "../components/MainMenu";
 import Carousel from "../components/Carousel";
 import ProductsField from "../components/ProductsField";
-import products from "../products/products";
 import "../styles/ProductsField.css";
-import Copyright from "../components/UI/Сopyright";
 
-function MainPage() {
-  const [editedArray, setEditedArray] = useState(products);
-
-  function getSelectArr(arr) {
-    setEditedArray(arr);
-  }
+function MainPage(props) {
   return (
     <div className="App">
-      <MainMenu products={products} getSelectArr={getSelectArr} />
-      <Carousel products={products} />
-      <ProductsField products={editedArray} />
+      <MainMenu products={props.products} />
+      <Carousel products={props.products} />
+      <ProductsField products={props.products} />
     </div>
   );
 }
