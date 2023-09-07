@@ -1,5 +1,12 @@
 .cart-page {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-product-block {
+  display: flex;
+  height: fit-content;
 }
 
 .cart-title {
@@ -70,4 +77,38 @@
   width: fit-content;
   background-color: cadetblue;
   padding: 0 20px 0 20px;
+}
+
+.send-result-block {
+  display: none;
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 50px;
+  border: 1px solid rgb(107, 107, 107);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(171, 171, 171);
+
+  font-family: "Kanit", sans-serif;
+  color: rgb(107, 107, 107);
+}
+
+.send-title {
+  margin-left: 20px;
+}
+.send-button {
+  margin-left: 50px;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(107, 107, 107);
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.send-button:hover {
+  background-color: rgb(101, 164, 130);
 }

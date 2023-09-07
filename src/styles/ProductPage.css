@@ -58,7 +58,9 @@
   height: 200px;
   margin-top: 100px;
   margin-left: 50px;
-  border: 1px solid;
+  border: 1px solid rgb(107, 107, 107);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(171, 171, 171);
 }
 .order {
   width: 100%;

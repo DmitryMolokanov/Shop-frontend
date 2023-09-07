@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
 
 function CartIcon(props) {
-  const [qtyIcon, setQtyIcon] = useState(0);
-  const [isQty, setIsQty] = useState(false);
+  let localStorageArr = JSON.parse(localStorage.getItem("cart"));
 
-  // useEffect(() => {
-  //   window.addEventListener("storage", () => {
-  //     setCart(JSON.parse(localStorage.getItem("cart")) || []);
-  //     console.log(cart);
-  //   });
-  // }, []);
+  const [qtyProducts, setQtyProducts] = useState(localStorageArr.length);
+
+  useEffect(() => {
+    setQtyProducts(localStorageArr.length);
+  }, [localStorageArr]);
 
   return (
-    <div>
+    <div className="cart-icon">
       <a href="/cart" className="cart-button">
         <img src="/icon/cart.png" alt="cart" />
         {props.title}
-      </a>
+      </a>{" "}
+      <div className="pointer-quantity-products">{qtyProducts}</div>
     </div>
   );
 }
