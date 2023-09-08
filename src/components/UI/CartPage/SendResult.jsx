@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SendButton from "./SendButton";
 import "../../../styles/CartPage.css";
 
 function SendResult(props) {
@@ -22,7 +23,7 @@ function SendResult(props) {
     >
       <h2 className="send-title">Total qty products: {amount.qty} </h2>
       <h2 className="send-title">Total amount: {amount.amount}$ </h2>
-      <button className="send-button">Proceed to checkout</button>
+      <SendButton title={"Proceed to checkout"} />
     </div>
   );
 }
