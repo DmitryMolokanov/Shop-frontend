@@ -3,17 +3,16 @@ import SendButton from "./SendButton";
 import "../../../styles/CartPage.css";
 
 function SendResult(props) {
-  let qty = props.products.reduce((a, b) => a + b.qty, 0);
-  let sum = props.products.reduce((a, b) => a + parseInt(b.cost), 0);
-
-  const [amount, setAmount] = useState({ qty: qty, amount: sum });
+  const [amount, setAmount] = useState({ qty: 0, amount: 0 });
   const [isSend, setIsSend] = useState(false);
 
   useEffect(() => {
-    if (props.products.length > 0) {
+    if (Array.isArray(props.products) && props.products.length > 0) {
       setIsSend(true);
+      let qty = props.products.reduce((a, b) => a + b.qty, 0);
+      let sum = props.products.reduce((a, b) => a + parseInt(b.cost), 0);
+      setAmount({ qty: qty, amount: sum });
     } else setIsSend(false);
-    setAmount({ qty: qty, amount: sum });
   }, [props]);
 
   return (

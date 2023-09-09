@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 function CartIcon(props) {
   let localStorageArr = JSON.parse(localStorage.getItem("cart"));
 
-  const [qtyProducts, setQtyProducts] = useState(localStorageArr.length);
+  const [qtyProducts, setQtyProducts] = useState(0);
 
   useEffect(() => {
-    setQtyProducts(localStorageArr.length);
+    if (Array.isArray(localStorageArr)) setQtyProducts(localStorageArr.length);
   }, [localStorageArr]);
 
   return (

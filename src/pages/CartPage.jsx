@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MainMenu from "../components/MainMenu";
 import "../styles/CartPage.css";
 import CartProductBlock from "../components/UI/CartPage/CartProductBlock";
 import SendResult from "../components/UI/CartPage/SendResult";
-import Copyright from "../components/UI/Сopyright";
 
 function CartPage() {
   const parseStorage = JSON.parse(localStorage.getItem("cart"));
