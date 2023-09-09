@@ -1,7 +1,11 @@
 import React from "react";
-import SelectQty from "../ProductPage/SelectQty";
+import SelectQty from "./SelectQty";
 
 function CartProductBlock(props) {
+  function getChangedQty(changedQty) {
+    props.getChangedQty(changedQty);
+  }
+
   return (
     <div>
       {Array.isArray(props.products) && props.products.length > 0 ? (
@@ -16,7 +20,12 @@ function CartProductBlock(props) {
               <div className="cart-product-title">{item.name}</div>
               <div className="cart-product-cost">{item.cost}</div>
               <div className="cart-product-qty">
-                <SelectQty />
+                <SelectQty
+                  item={item}
+                  products={props.products}
+                  getCHangedQty={getChangedQty}
+                  value={item.qty}
+                />
               </div>
               <button
                 className="close"

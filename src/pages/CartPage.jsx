@@ -8,9 +8,14 @@ function CartPage() {
   const parseStorage = JSON.parse(localStorage.getItem("cart"));
 
   const [products, setProducts] = useState(parseStorage);
+  const [changedQtyProducts, setChangedQtyProducts] = useState();
 
   function getCurrentProducts(curProd) {
     setProducts(curProd);
+  }
+
+  function getChangedQty(changedQty) {
+    setChangedQtyProducts(changedQty);
   }
 
   return (
@@ -20,8 +25,12 @@ function CartPage() {
         <CartProductBlock
           products={products}
           getCurrentProducts={getCurrentProducts}
+          getChangedQty={getChangedQty}
         />
-        <SendResult products={products} />
+        <SendResult
+          products={products}
+          changedQtyProducts={changedQtyProducts}
+        />
       </div>
     </div>
   );

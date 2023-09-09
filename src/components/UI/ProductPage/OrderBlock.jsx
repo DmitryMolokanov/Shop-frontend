@@ -17,6 +17,7 @@ function OrderBlock(props) {
               id: props.selectedProduct.id,
               name: props.selectedProduct.name,
               cost: props.selectedProduct.cost,
+              total_amount: props.selectedProduct.total_amount,
               img: props.selectedProduct.img[0],
               qty: 1,
             };
