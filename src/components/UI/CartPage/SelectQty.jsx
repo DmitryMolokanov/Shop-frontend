@@ -1,24 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function SelectQty(props) {
-  const [products, setProducts] = useState();
-
-  useEffect(() => {
-    if (Array.isArray(props.products)) {
-      setProducts(props.products);
-    }
-  }, [props]);
-
   return (
     <div className="order">
       <label>
         Quantity:
         <select
           className="select-qty"
-          value={props.value}
+          value={props.item.qty}
           onChange={(e) => {
             const totalQty = Number(e.target.value);
-            const result = products.map((prod) => {
+            const result = props.products.map((prod) => {
               if (prod.id === props.item.id) {
                 prod.qty = totalQty;
                 prod.total_amount = parseInt(prod.cost);

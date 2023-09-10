@@ -2,8 +2,10 @@ import React from "react";
 import SelectQty from "./SelectQty";
 
 function CartProductBlock(props) {
-  function getChangedQty(changedQty) {
-    props.getChangedQty(changedQty);
+  function removeProduct(item) {
+    let currentProducts = props.products.filter((p) => p.id !== item.id);
+    props.getCurrentProducts(currentProducts);
+    localStorage.setItem("cart", JSON.stringify(currentProducts));
   }
 
   return (
@@ -23,18 +25,13 @@ function CartProductBlock(props) {
                 <SelectQty
                   item={item}
                   products={props.products}
-                  getCHangedQty={getChangedQty}
-                  value={item.qty}
+                  getCHangedQty={props.getChangedQty}
                 />
               </div>
               <button
                 className="close"
                 onClick={() => {
-                  let currentProducts = props.products.filter(
-                    (p) => p.id !== item.id
-                  );
-                  props.getCurrentProducts(currentProducts);
-                  localStorage.setItem("cart", JSON.stringify(currentProducts));
+                  removeProduct(item);
                 }}
               >
                 X
