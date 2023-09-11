@@ -7,21 +7,18 @@ function SendResult(props) {
   const [isSend, setIsSend] = useState(false);
 
   useEffect(() => {
-    const products = props.changedQtyProducts
-      ? props.changedQtyProducts
-      : props.products;
-    if (Array.isArray(products)) {
-      let qty = products.reduce((a, b) => a + b.qty, 0);
-      let sum = products.reduce((a, b) => a + b.total_amount, 0);
+    if (Array.isArray(props.cartProducts)) {
+      let qty = props.cartProducts.reduce((a, b) => a + b.qty, 0);
+      let sum = props.cartProducts.reduce((a, b) => a + b.total_amount, 0);
       setAmount({ qty: qty, amount: sum });
     }
-  }, [props]);
+  }, [props.cartProducts]);
 
   useEffect(() => {
-    if (Array.isArray(props.products) && props.products.length > 0) {
+    if (props.cartProducts.length > 0) {
       setIsSend(true);
     } else setIsSend(false);
-  }, [props]);
+  }, [props.cartProducts]);
 
   return (
     <div

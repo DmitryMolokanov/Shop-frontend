@@ -1,17 +1,20 @@
-import React from "react";
+import { React, useContext } from "react";
 import SelectQty from "./SelectQty";
+import { CartContext } from "../../../constext/context";
 
-function CartProductBlock(props) {
+function CartProductBlock() {
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+
   function removeProduct(item) {
-    let currentProducts = props.products.filter((p) => p.id !== item.id);
-    props.getCurrentProducts(currentProducts);
+    let currentProducts = cartProducts.filter((p) => p.id !== item.id);
     localStorage.setItem("cart", JSON.stringify(currentProducts));
+    setCartProducts(currentProducts);
   }
 
   return (
     <div>
-      {Array.isArray(props.products) && props.products.length > 0 ? (
-        props.products.map((item, index) => {
+      {Array.isArray(cartProducts) && cartProducts.length > 0 ? (
+        cartProducts.map((item, index) => {
           const id = index + 1;
           return (
             <div key={item.id} className="cart-order-block">
@@ -22,11 +25,7 @@ function CartProductBlock(props) {
               <div className="cart-product-title">{item.name}</div>
               <div className="cart-product-cost">{item.cost}</div>
               <div className="cart-product-qty">
-                <SelectQty
-                  item={item}
-                  products={props.products}
-                  getCHangedQty={props.getChangedQty}
-                />
+                <SelectQty item={item} />
               </div>
               <button
                 className="close"

@@ -1,6 +1,22 @@
-import React from "react";
+import { React, useContext } from "react";
+import { CartContext } from "../../../constext/context";
 
 function SelectQty(props) {
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+
+  function selectOnChange(e) {
+    const totalQty = Number(e.target.value);
+    const result = cartProducts.map((prod) => {
+      if (prod.id === props.item.id) {
+        prod.qty = totalQty;
+        prod.total_amount = parseInt(prod.cost);
+        prod.total_amount = prod.total_amount * totalQty;
+        return prod;
+      } else return prod;
+    });
+    localStorage.setItem("cart", JSON.stringify(result));
+    setCartProducts(result);
+  }
   return (
     <div className="order">
       <label>
@@ -9,17 +25,7 @@ function SelectQty(props) {
           className="select-qty"
           value={props.item.qty}
           onChange={(e) => {
-            const totalQty = Number(e.target.value);
-            const result = props.products.map((prod) => {
-              if (prod.id === props.item.id) {
-                prod.qty = totalQty;
-                prod.total_amount = parseInt(prod.cost);
-                prod.total_amount = prod.total_amount * totalQty;
-                return prod;
-              } else return prod;
-            });
-            localStorage.setItem("cart", JSON.stringify(result));
-            props.getCHangedQty(result);
+            selectOnChange(e);
           }}
         >
           <option value="1">1</option>

@@ -1,8 +1,11 @@
-import React from "react";
+import { React, useContext } from "react";
 import SelectQty from "./SelectQty";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../constext/context";
 
 function OrderBlock(props) {
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+
   const navigate = useNavigate();
   return (
     <div className="order-block">
@@ -12,7 +15,6 @@ function OrderBlock(props) {
         <button
           className="btn-add-cart"
           onClick={() => {
-            const getProducts = JSON.parse(localStorage.getItem("cart"));
             const products = {
               id: props.selectedProduct.id,
               name: props.selectedProduct.name,
@@ -23,16 +25,17 @@ function OrderBlock(props) {
             };
 
             let productArr = [];
-            if (Array.isArray(getProducts)) {
-              for (let value of getProducts) {
+            if (Array.isArray(cartProducts)) {
+              for (let value of cartProducts) {
                 if (value.id === products.id) {
                   navigate("/cart");
                   return;
                 }
               }
-              productArr = [...getProducts, products];
+              productArr = [...cartProducts, products];
             } else productArr = [products];
             localStorage.setItem("cart", JSON.stringify(productArr));
+            setCartProducts(productArr);
             navigate("/cart");
           }}
         >
