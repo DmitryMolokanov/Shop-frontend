@@ -1,6 +1,6 @@
 import React from "react";
 import MainMenu from "../components/MainMenu";
-import ProductsField from "../components/ProductsField";
+import ProductsField from "../components/UI/MainPage/ProductsField/ProductsField";
 
 function SearchedProducts() {
   const searchArr = JSON.parse(localStorage.getItem("search"));

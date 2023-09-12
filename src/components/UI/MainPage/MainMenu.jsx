@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/MainMenu.css";
-import SearchForm from "./UI/MainMenu/SearchForm";
-import HomeIcon from "./UI/MainMenu/HomeIcon";
-import CartIcon from "./UI/MainMenu/CartIcon";
-import LoginIcon from "./UI/MainMenu/LoginIcon";
+import "../../../styles/MainMenu.css";
+import SearchForm from "../MainPage/MainMenu/SearchForm";
+import HomeIcon from "../MainPage/MainMenu/HomeIcon";
+import CartIcon from "../MainPage/MainMenu/CartIcon";
+import LoginIcon from "../MainPage/MainMenu/LoginIcon";
 
 function MainMenu(props) {
   return (

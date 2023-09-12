@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Pointer from "./UI/Carousel/Pointer";
-import Picture from "./UI/Carousel/Picture";
-import "../styles/Carousel.css";
-import Discription from "./UI/Carousel/Discription";
+import Pointer from "../Carousel/Pointer";
+import Picture from "../Carousel/Picture";
+import "../../../styles/Carousel.css";
+import Discription from "../Carousel/Discription";
 
 function Carousel(props) {
   const [index, setIndex] = useState(0);

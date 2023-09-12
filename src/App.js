@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 function App() {
   const storageProducts = JSON.parse(localStorage.getItem("cart"));
   const [cartProducts, setCartProducts] = useState(storageProducts);
+
   return (
     <CartContext.Provider value={{ cartProducts, setCartProducts }}>
       <div className="App">

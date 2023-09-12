@@ -1,5 +1,4 @@
 import { React, useContext } from "react";
-import SelectQty from "./SelectQty";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../../constext/context";
 
@@ -10,7 +9,6 @@ function OrderBlock(props) {
   return (
     <div className="order-block">
       <div className="order">Price: {props.selectedProduct.cost}</div>
-      <SelectQty />
       <div className="order-btn">
         <button
           className="btn-add-cart"
@@ -21,7 +19,7 @@ function OrderBlock(props) {
               cost: props.selectedProduct.cost,
               total_amount: props.selectedProduct.total_amount,
               img: props.selectedProduct.img[0],
-              qty: 1,
+              qty: cartProducts > 0 ? cartProducts.qty : 1,
             };
 
             let productArr = [];

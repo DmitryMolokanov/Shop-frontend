@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/App.css";
-import MainMenu from "../components/MainMenu";
-import Carousel from "../components/Carousel";
-import ProductsField from "../components/ProductsField";
+import MainMenu from "../components/UI/MainPage/MainMenu";
+import Carousel from "../components/UI/MainPage/Carousel";
+import ProductsField from "../components/UI/MainPage/ProductsField/ProductsField";
 import "../styles/ProductsField.css";
 
 function MainPage(props) {
