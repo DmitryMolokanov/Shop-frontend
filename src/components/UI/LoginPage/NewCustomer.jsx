@@ -4,8 +4,8 @@ function NewCustomer() {
   return (
     <label style={{ marginTop: "20px", color: " rgb(107, 107, 107) " }}>
       New customer?
-      <a href="/bububu" className="register-link">
-        Register
+      <a href="/registration" className="register-link">
+        Registration
       </a>
     </label>
   );

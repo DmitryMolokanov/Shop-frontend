@@ -17,24 +17,51 @@
   flex-direction: row;
   align-items: center;
   margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: fit-content;
 }
 .products-field-btn {
   width: fit-content;
   height: fit-content;
   font-family: "Kanit", sans-serif;
-  color: rgb(107, 107, 107);
+  color: white;
   font-size: larger;
+  background-color: rgb(101, 164, 130);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
+
 .products-field-ul {
-  display: none;
-  display: flex;
-  flex-direction: row;
+  margin: 0;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-direction: alternate;
 }
+
+@keyframes show {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
 .products-field-li {
   margin-left: 10px;
   font-family: "Kanit", sans-serif;
   font-size: medium;
+  background-color: rgb(107, 107, 107);
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
 
 .products-field {

@@ -3,12 +3,8 @@ import React from "react";
 function LoginInput(props) {
   return (
     <label>
-      {props.title}: <br />
-      <input
-        type="text"
-        placeholder="Enter your e-mail"
-        className="input-login"
-      />
+      {props.children}: <br />
+      <input type="text" className="input-login" />
     </label>
   );
 }

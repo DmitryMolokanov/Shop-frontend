@@ -32,22 +32,21 @@ function SortProducts(props) {
       <button className="products-field-btn" onClick={showSortButton}>
         Sort products
       </button>
-      <div>
-        <ul
-          className="products-field-ul"
-          style={showSort ? { display: "block" } : { display: "none" }}
-        >
-          <button className="products-field-li" onClick={sortByExpensive}>
-            expensive
-          </button>
-          <button className="products-field-li" onClick={sortByCheaper}>
-            cheaper
-          </button>
-          <button className="products-field-li" onClick={sortByName}>
-            by name
-          </button>
-        </ul>
-      </div>
+
+      <ul
+        className="products-field-ul"
+        style={showSort ? { display: "block" } : { display: "none" }}
+      >
+        <button className="products-field-li" onClick={sortByExpensive}>
+          expensive
+        </button>
+        <button className="products-field-li" onClick={sortByCheaper}>
+          cheaper
+        </button>
+        <button className="products-field-li" onClick={sortByName}>
+          by name
+        </button>
+      </ul>
     </div>
   );
 }

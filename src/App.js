@@ -7,6 +7,7 @@ import CartPage from "./pages/CartPage";
 import products from "./products/products";
 import SearchedProducts from "./pages/SearchedProducts";
 import LoginPage from "./pages/LoginPage";
+import Registation from "./pages/Registation";
 
 function App() {
   const storageProducts = JSON.parse(localStorage.getItem("cart"));
@@ -25,6 +26,7 @@ function App() {
             />
             <Route path="/search" element={<SearchedProducts />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/registration" element={<Registation />} />
           </Routes>
         </BrowserRouter>
       </div>

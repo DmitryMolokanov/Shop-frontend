@@ -27,7 +27,7 @@ function SendResult(props) {
     >
       <h2 className="send-title">Total qty products: {amount.qty} </h2>
       <h2 className="send-title">Total amount: {amount.amount}$ </h2>
-      <SendButton title={"Proceed to checkout"} />
+      <SendButton>Proceed to checkout</SendButton>
     </div>
   );
 }
