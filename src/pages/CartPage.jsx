@@ -1,5 +1,5 @@
 import { React } from "react";
-import MainMenu from "../components/MainMenu";
+import MainMenu from "../components/UI/MainPage/MainMenu";
 import "../styles/CartPage.css";
 import CartProductBlock from "../components/UI/CartPage/CartProductBlock";
 import SendResult from "../components/UI/CartPage/SendResult";

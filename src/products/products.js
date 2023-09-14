@@ -5,9 +5,9 @@ const products = [
     cost: "500$",
     total_amount: 500,
     img: [
-      "/products-photo/iPhone 14 Pro Max 512GB/iPhone 14 Pro Max 512GB.png",
-      "/products-photo/iPhone 14 Pro Max 512GB/iPhone 14 Pro Max 512GB 2.png",
-      "/products-photo/iPhone 14 Pro Max 512GB/iPhone 14 Pro Max 512GB 3.png",
+      "/products-photo/iPhone_14_Pro_Max_512GB/iPhone_14_Pro_Max_512GB.png",
+      "/products-photo/iPhone_14_Pro_Max_512GB/iPhone_14_Pro_Max_512GB_2.png",
+      "/products-photo/iPhone_14_Pro_Max_512GB/iPhone_14_Pro_Max_512GB_3.png",
     ],
     discription:
       "The iPhone 14 Pro Max is a high-end smartphone from Apple that was released in September 2022. It has a large 6.7-inch OLED display with a 120Hz refresh rate and Dolby Vision support. The phone is powered by an A16 Bionic processor and has 6GB of RAM. The camera on the iPhone 14 Pro Max includes a 48MP wide camera, a 12MP telephoto camera, and a 12MP ultrawide camera.",
@@ -15,13 +15,13 @@ const products = [
 
   {
     id: 2,
-    name: "Apple. AirPods2",
+    name: "Apple AirPods2",
     cost: "300$",
     total_amount: 300,
     img: [
-      "/products-photo/headphones/Apple. AirPods2.png",
-      "/products-photo/headphones/Apple. AirPods2(2).png",
-      "/products-photo/headphones/Apple. AirPods2(3).png",
+      "/products-photo/headphones/AppleAirPods2.png",
+      "/products-photo/headphones/AppleAirPods2(2).png",
+      "/products-photo/headphones/AppleAirPods2(3).png",
     ],
     discription:
       "The Apple AirPods 2 are wireless headphones that are designed to be comfortable and lightweight. They have a built-in microphone and are Bluetooth-enabled, allowing you to connect them to your iPhone, iPad, or iPod touch. The AirPods 2 have a quick-charge feature that allows you to charge them quickly and use them for up to 5 hours on a single charge. ",
@@ -32,8 +32,8 @@ const products = [
     cost: "300$",
     total_amount: 300,
     img: [
-      "/products-photo/Watch Series 8 GPS 45mm/Apple watch.png",
-      "/products-photo/Watch Series 8 GPS 45mm/Apple watch 2.png",
+      "/products-photo/Watch_Series_8_GPS_45mm/Applewatch.png",
+      "/products-photo/Watch_Series_8_GPS_45mm/Applewatch2.png",
     ],
     discription:
       "The Watch Series 8 GPS is a GPS-enabled smartwatch from Apple. It has a 45 mm stainless steel case and a sapphire crystal display. The watch features an always-on Retina OLED display, an always-powered digital crown, and swimproof capabilities. It also has built-in GPS, heart rate monitoring, and SpO2 tracking. ",
@@ -56,9 +56,9 @@ const products = [
     cost: "800$",
     total_amount: 800,
     img: [
-      "/products-photo/camera/Canon EOS 90D Body.png",
-      "/products-photo/camera/Canon EOS 90D Body2.png",
-      "/products-photo/camera/Canon EOS 90D Body3.png",
+      "/products-photo/camera/Canon_EOS_90D_Body.png",
+      "/products-photo/camera/Canon_EOS_90D_Body2.png",
+      "/products-photo/camera/Canon_EOS_90D_Body3.png",
     ],
     discription:
       "The Canon EOS 90D is a compact DSLR camera that offers excellent image quality and a wide range of features. Canon EOS 90D is an excellent choice for anyone looking for a compact DSLR with excellent image quality, fast shooting speed, and a variety of features.",

@@ -4,7 +4,7 @@ function LoginInput(props) {
   return (
     <label>
       {props.children}: <br />
-      <input type="text" className="input-login" />
+      <input type="text" className="input-login" ref={props.value} />
     </label>
   );
 }

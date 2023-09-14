@@ -1,5 +1,5 @@
 import React from "react";
-import MainMenu from "../components/MainMenu";
+import MainMenu from "../components/UI/MainPage/MainMenu";
 import SendButton from "../components/UI/CartPage/SendButton";
 import LoginInput from "../components/UI/LoginPage/LoginInput";
 import NewCustomer from "../components/UI/LoginPage/NewCustomer";

@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import MainMenu from "../components/MainMenu";
+import MainMenu from "../components/UI/MainPage/MainMenu";
 import ProductOrder from "../components/UI/ProductPage/ProductOrder";
 import products from "../products/products";
 import "../styles/ProductPage.css";

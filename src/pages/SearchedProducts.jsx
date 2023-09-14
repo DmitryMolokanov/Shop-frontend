@@ -1,5 +1,5 @@
 import React from "react";
-import MainMenu from "../components/MainMenu";
+import MainMenu from "../components/UI/MainPage/MainMenu";
 import ProductsField from "../components/UI/MainPage/ProductsField/ProductsField";
 
 function SearchedProducts() {
