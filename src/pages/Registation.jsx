@@ -14,31 +14,40 @@ function Registation() {
   //   confPassword: "",
   // });
 
-  const [validMessage, setValidMessage] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+  const [validMessage, setValidMessage] = useState("");
 
   let nameValue = useRef(null);
   let emailValue = useRef(null);
   let passwordValue = useRef(null);
   let confPasswordValue = useRef(null);
 
-  function getFormValue(e) {
+  async function getFormValue(e) {
     e.preventDefault();
     const form = {
       name: nameValue.current.value,
-      "e-mail": emailValue.current.value,
+      email: emailValue.current.value,
       password: passwordValue.current.value,
       confPassword: confPasswordValue.current.value,
     };
     if (validationForm(form) === false) {
-      setValidMessage(true);
+      setIsValid(true);
+      setValidMessage("Please fill out all fields");
       return;
     }
 
-    fetch("/form", {
+    const response = await fetch("user/registration", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      setIsValid(true);
+      setValidMessage(result.error[0].msg);
+    } else setIsValid(false);
 
     cleanForm([nameValue, emailValue, passwordValue, confPasswordValue]);
   }
@@ -47,9 +56,7 @@ function Registation() {
     <div className="login-page-block">
       <MainMenu />
       <h1 className="login-tytle">Sign in</h1>
-      <ValidErr validMessage={validMessage}>
-        Please fill out all fields
-      </ValidErr>
+      <ValidErr validMessage={isValid}>{validMessage}</ValidErr>
 
       <form className="login" onSubmit={(e) => getFormValue(e)}>
         <div className="login-form-block">
