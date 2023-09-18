@@ -13,8 +13,8 @@ function CartIcon(props) {
     <div className="cart-icon">
       <a href="/cart" className="cart-button">
         <img src="/icon/cart.png" alt="cart" />
-        {props.title}
-      </a>{" "}
+        {props.children}
+      </a>
       <div className="pointer-quantity-products">{qtyProducts}</div>
     </div>
   );

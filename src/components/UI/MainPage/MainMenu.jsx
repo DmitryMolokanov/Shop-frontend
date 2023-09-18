@@ -11,8 +11,8 @@ function MainMenu(props) {
       <div className="main-menu-container">
         <HomeIcon />
         <SearchForm products={props.products} />
-        <CartIcon title={"Cart"} />
-        <LoginIcon title={"Sign In"} />
+        <CartIcon>Cart</CartIcon>
+        <LoginIcon>Sign In</LoginIcon>
       </div>
     </div>
   );

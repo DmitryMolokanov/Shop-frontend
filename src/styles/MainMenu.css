@@ -11,7 +11,11 @@
 }
 
 .main-menu-search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: 800px;
+  width: fit-content;
 }
 .searchInput {
   width: 200px;
@@ -84,9 +88,42 @@
   margin-right: 5px;
   background-color: white;
   border-radius: 50%;
+  font-family: "Kanit", sans-serif;
 }
 
-.login-button:hover {
+.login-name {
+  margin-right: 25px;
+  color: white;
+  background-color: rgb(57, 55, 61);
+  font-size: larger;
+  line-height: 30px;
+  border: 0;
+  cursor: pointer;
+}
+
+.login-button :hover {
   color: rgb(101, 164, 130);
   text-decoration: underline;
+}
+
+.user-menu {
+  position: absolute;
+  top: 100px;
+  width: 130px;
+  height: 50px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.user-menu-logout {
+  width: 100%;
+  font-size: large;
+  border: 0;
+  color: rgb(107, 107, 107);
+}
+.user-menu-logout:hover {
+  background-color: rgb(218, 218, 218);
+  color: rgb(174, 56, 56);
+  text-decoration: none;
+  border-radius: 10px;
 }

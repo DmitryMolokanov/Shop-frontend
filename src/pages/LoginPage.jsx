@@ -27,8 +27,10 @@ function LoginPage() {
     const result = await response.json();
     if (result.success === false) {
       setIsValid(true);
+    } else {
+      localStorage.setItem("user", JSON.stringify(result));
+      navigate("/");
     }
-    navigate("/");
   }
 
   return (

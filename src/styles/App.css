@@ -2,17 +2,9 @@ body {
   margin: 0;
 }
 .App {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.copyraith {
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  margin-bottom: 20px;
-  font-family: "Kanit", sans-serif;
-  color: rgb(107, 107, 107);
-  font-size: larger;
 }
