@@ -56,7 +56,7 @@ function Registation() {
     <div className="login-page-block">
       <MainMenu />
       <h1 className="login-tytle">Sign in</h1>
-      <ValidErr validMessage={isValid}>{validMessage}</ValidErr>
+      <ValidErr isValid={isValid}>{validMessage}</ValidErr>
 
       <form className="login" onSubmit={(e) => getFormValue(e)}>
         <div className="login-form-block">
