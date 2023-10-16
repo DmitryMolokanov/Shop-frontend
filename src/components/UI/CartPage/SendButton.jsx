@@ -2,7 +2,7 @@ import React from "react";
 
 function SendButton(props) {
   return (
-    <button className="send-button" style={props.style}>
+    <button className="send-button" onClick={props.func}>
       {props.children}
     </button>
   );
