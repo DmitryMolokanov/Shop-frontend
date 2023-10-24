@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 3,
+    id: 1,
     name: "iPhone 14 Pro Max 512GB",
     cost: "500$",
     total_amount: 500,

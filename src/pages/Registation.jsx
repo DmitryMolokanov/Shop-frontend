@@ -7,13 +7,6 @@ import cleanForm from "../utils/form-helper/cleanForm";
 import validationForm from "../utils/form-helper/validationForm";
 
 function Registation() {
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   "e-mail": "",
-  //   password: "",
-  //   confPassword: "",
-  // });
-
   const [isValid, setIsValid] = useState(false);
   const [validMessage, setValidMessage] = useState("");
 

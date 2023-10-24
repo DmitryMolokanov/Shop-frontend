@@ -4,8 +4,8 @@ import { CartContext } from "../../../constext/context";
 import "../../../styles/CartPage.css";
 
 function SendResult(props) {
-  console.log(props);
-  const { cartProducts, setCartProducts } = useContext(CartContext);
+  const cartProducts = useContext(CartContext);
+  // const { cartProducts, setCartProducts } = useContext(CartContext);
   const user = JSON.parse(localStorage.getItem("user"));
 
   const [amount, setAmount] = useState({ qty: 0, amount: 0 });
@@ -21,7 +21,8 @@ function SendResult(props) {
   }, [props.cartProducts]);
 
   function formedOrder() {
-    user.cart = cartProducts;
+    user.cart = cartProducts.cartProducts;
+    console.log(user);
     localStorage.setItem("user", JSON.stringify(user));
   }
 

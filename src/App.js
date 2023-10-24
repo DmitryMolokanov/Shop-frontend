@@ -8,6 +8,7 @@ import products from "./products/products";
 import SearchedProducts from "./pages/SearchedProducts";
 import LoginPage from "./pages/LoginPage";
 import Registation from "./pages/Registation";
+import Purchase from "./pages/Purchase";
 
 function App() {
   const storageProducts = JSON.parse(localStorage.getItem("cart"));
@@ -24,6 +25,7 @@ function App() {
               path="/cart"
               element={<CartPage cartProducts={cartProducts} />}
             />
+            <Route path="/purchase" element={<Purchase />} />
             <Route path="/search" element={<SearchedProducts />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registration" element={<Registation />} />
