@@ -5,7 +5,6 @@ import "../../../styles/CartPage.css";
 
 function SendResult(props) {
   const cartProducts = useContext(CartContext);
-  // const { cartProducts, setCartProducts } = useContext(CartContext);
   const user = JSON.parse(localStorage.getItem("user"));
 
   const [amount, setAmount] = useState({ qty: 0, amount: 0 });
@@ -22,7 +21,6 @@ function SendResult(props) {
 
   function formedOrder() {
     user.cart = cartProducts.cartProducts;
-    console.log(user);
     localStorage.setItem("user", JSON.stringify(user));
   }
 
@@ -33,7 +31,9 @@ function SendResult(props) {
     >
       <h2 className="send-title">Total qty products: {amount.qty} </h2>
       <h2 className="send-title">Total amount: {amount.amount}$ </h2>
-      <SendButton func={formedOrder}>Proceed to checkout</SendButton>
+      <SendButton func={formedOrder} user={user}>
+        Proceed to checkout
+      </SendButton>
     </div>
   );
 }

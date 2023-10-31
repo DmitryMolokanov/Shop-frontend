@@ -25,6 +25,7 @@ function PaymentCardForm(props) {
     email: props.contactsData.email,
     date: new Date(),
     products: props.products.cartProducts,
+    total_amount: props.getTotalCost(),
   };
 
   const navigate = useNavigate();
